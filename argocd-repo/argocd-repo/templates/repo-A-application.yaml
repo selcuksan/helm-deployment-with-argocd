@@ -6,12 +6,10 @@ metadata:
 spec:
   project: default
   source:
-    chart: my-app
     repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
     path: kod-repo-A/helm-chart/my-app
     targetRevision: HEAD
-    helm:
-      releaseName: my-app
   destination:
-    server: "https://kubernetes.default.svc"
+    server: https://kubernetes.default.svc
     namespace: default
+
