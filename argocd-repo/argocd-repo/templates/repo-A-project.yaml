@@ -7,4 +7,3 @@ spec:
   destinations:
     - name: 'repo-A'
       namespace: "repo-A"
-      server: https://kubernetes.default.svc
