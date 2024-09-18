@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
-    path: kod-repo-B/helm-chart/my-app-3
+    path: kod-repo-C/helm-chart/my-app-3
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
