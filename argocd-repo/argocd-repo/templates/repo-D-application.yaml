@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app-d
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
+    path: kod-repo-D/helm-chart/my-app-4
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
