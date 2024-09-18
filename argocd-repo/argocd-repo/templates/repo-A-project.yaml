@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: repo-A
+  namespace: {{ .Values.gitops.namespace }}
+spec:
+  destinations:
+    - name: '*'
+      namespace: "repo-A"
+      server: {{ .Values.env.local.url }}
