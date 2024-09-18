@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: repo-A
-  namespace: {{ .Values.gitops.namespace }}
+  namespace: {{ .Values.argocd.namespace }}
 spec:
   destinations:
     - name: '*'
