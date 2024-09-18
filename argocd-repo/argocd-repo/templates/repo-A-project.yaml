@@ -1,9 +1,0 @@
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: repo-A
-  namespace: argocd
-spec:
-  destinations:
-    - name: 'repo-A'
-      namespace: "repo-A"
