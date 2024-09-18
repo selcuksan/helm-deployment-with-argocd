@@ -8,7 +8,6 @@ spec:
   source:
     chart: my-app
     repoURL: https://github.com/selcuksan/helm-deployment-with-argocd/tree/main/kod-repo-A/helm-chart/my-app
-    targetRevision: 1.16.1
     helm:
       releaseName: my-app
   destination:
