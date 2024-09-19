@@ -21,6 +21,3 @@ spec:
       destination:
         server: '{{url}}'
         namespace: app-set-demo
-      syncPolicy:
-        syncOptions:
-          - CreateNamespace=true
