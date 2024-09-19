@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: test
+        url: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: 'app-of-apps'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
+        targetRevision: HEAD
+        path: argocd-repo/argocd-repo/templates
+      destination:
+        server: '{{url}}'
+        namespace: argocd
