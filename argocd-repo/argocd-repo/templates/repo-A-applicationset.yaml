@@ -19,5 +19,5 @@ spec:
         targetRevision: HEAD
         path: kod-repo-A/helm-chart/my-app-1
       destination:
-        server: '{{ "{{" }}url{{ "}}" }}'
+        server: '{{.url}}'
         namespace: app-set-demo
