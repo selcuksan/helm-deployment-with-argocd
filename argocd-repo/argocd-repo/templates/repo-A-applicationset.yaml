@@ -7,10 +7,6 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: dev
-        url: https://1.2.3.4
-      - cluster: prod
-        url: https://2.4.6.8
       - cluster: test
         url: https://kubernetes.default.svc
   template:
