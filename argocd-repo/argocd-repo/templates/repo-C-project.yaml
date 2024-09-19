@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: my-app-c
+  namespace: argocd
+spec:
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - 'https://github.com/selcuksan/helm-deployment-with-argocd.git'
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  # Destination clusters can be identified by 'server', 'name', or both.
+  destinations:
+  - namespace: default
+    server: https://kubernetes.default.svc

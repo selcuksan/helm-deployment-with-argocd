@@ -4,7 +4,7 @@ metadata:
   name: my-app-d
   namespace: argocd
 spec:
-  project: default
+  project: my-app-d
   source:
     repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
     path: kod-repo-D/helm-chart/my-app-4
