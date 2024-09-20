@@ -18,6 +18,9 @@ spec:
         repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
         targetRevision: HEAD
         path: kod-repo-A/helm-chart/my-app-1
+        helm:
+          valueFiles:
+            - test-values.yaml
       destination:
         server: '{{url}}'
         namespace: app-set-demo
