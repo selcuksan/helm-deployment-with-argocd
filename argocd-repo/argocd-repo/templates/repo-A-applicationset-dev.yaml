@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: my-app-a-dev
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: test
+        url: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: 'local-my-app-a-dev'
+    spec:
+      project: my-app-a
+      source:
+        repoURL: https://github.com/selcuksan/helm-deployment-with-argocd.git
+        targetRevision: HEAD
+        path: kod-repo-A/helm-chart/my-app-1
+        helm:
+          valueFiles:
+            - dev-values.yaml
+      destination:
+        server: '{{url}}'
+        namespace: app-set-demo
